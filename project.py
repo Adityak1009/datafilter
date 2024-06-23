@@ -31,7 +31,7 @@ if selected_tab == 'Tab 2':
 
 
     # Directory containing CSV files
-    csv_directory = '../dataFiles'  # Replace with your folder path
+    csv_directory = os.getcwd()  # Replace with your folder path
 
     # List all CSV files in the directory
     csv_files = list_csv_files(csv_directory)
