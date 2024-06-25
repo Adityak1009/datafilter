@@ -2,6 +2,7 @@ import numpy as num
 import pandas as pd
 import streamlit as st
 import os
+import base64
 
 
 # st.title("hello Visual studio")
@@ -23,6 +24,21 @@ if 'dataframe' not in st.session_state:
 # Sidebar to select tab
 selected_tab = st.sidebar.radio('Select Tab', ['Tab 1', 'Tab 2'])
 
+if selected_tab == 'Tab 1':
+        # Function to display PDF
+        def show_pdf(file_path):
+            with open(file_path, "rb") as f:
+                base64_pdf = base64.b64encode(f.read()).decode('utf-8')
+                pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="800" height="1000" type="application/pdf"></iframe>'
+                st.markdown(pdf_display, unsafe_allow_html=True)
+
+        st.title("PDF Viewer")
+
+        # Path to your PDF file
+        pdf_file_path = "ADITYAKUMARRESUME.pdf"
+
+        # Display PDF
+        show_pdf(pdf_file_path)
 
 if selected_tab == 'Tab 2':
     # Function to list all CSV files in a directory
