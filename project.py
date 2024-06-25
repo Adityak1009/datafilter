@@ -32,7 +32,7 @@ if selected_tab == 'Tab 1':
                 pdf_display = f'<iframe src="data:application/pdf;base64,{base64_pdf}" width="800" height="1000" type="application/pdf"></iframe>'
                 st.markdown(pdf_display, unsafe_allow_html=True)
 
-        st.title("PDF Viewer")
+        st.title("PDF  Viewer")
 
         # Path to your PDF file
         pdf_file_path = "ADITYAKUMARRESUME.pdf"
