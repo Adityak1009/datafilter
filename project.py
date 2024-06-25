@@ -37,7 +37,7 @@ if selected_tab == 'Tab 1':
         st.title("PDF  Viewer")
 
         # Path to your PDF file
-        pdf_file_path = "ADITYAKUMARRESUME.pdf"
+        pdf_file_path = "ADITYA.pdf"
 
         # Display PDF
         show_pdf(pdf_file_path)
