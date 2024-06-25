@@ -39,7 +39,13 @@ if selected_tab == 'Tab 1':
         # Path to your PDF file
         pdf_file_path = "ADITYA.pdf"
 
+        def list_csv_files1(directory):
+            return [f for f in os.listdir(directory) if f.endswith('.pdf')]
+
+        csv_directory = os.getcwd()
+        pdf_files = list_csv_files1(csv_directory)
         # Display PDF
+        pdf_files
         show_pdf(pdf_file_path)
 
 if selected_tab == 'Tab 2':
